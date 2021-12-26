@@ -21,9 +21,6 @@ public class MoveService {
             // specified by filepath
 
         // TODO: Doesn't work in jar? // SHOULD be in target?
-        String filePath = "/Users/renly/Development/Java/life-dashboard-service/src/main/resources/csv/moverecords.csv";
-        URL resource = getClass().getClassLoader().getResource(filePath);
-        InputStream is = getClass().getClassLoader().getResourceAsStream(filePath);
 
 
             try {
@@ -114,18 +111,7 @@ public class MoveService {
 
     public List<Move> getAllMoves() throws Exception {
 
-
-        String filePath = "/Users/renly/Development/Java/life-dashboard-service/src/main/resources/csv/moverecords.csv";
-        URL resource = getClass().getClassLoader().getResource(filePath);
-
-
-        // WORK
-        System.out.println("\ntriccks: " +  ClassLoader.getSystemResource("csv/moves-old.csv").toURI());
-        System.out.println( ClassLoader.getSystemResource("").toURI());
-//        System.out.println(resource.toURI());
-
-
-        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moves-old.csv").toURI()));
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moves.csv").toURI()));
         List<String[]> csvData  = CSVParser.readAll(reader);
         List<Move> moves = new ArrayList<>();
 
@@ -155,6 +141,7 @@ public class MoveService {
                 move.setType(row[2]);
                 move.setRecordType(row[3]);
                 move.setDateLastDone(row[5]);
+                move.setImageURL(row[6]);
 
 
                 System.out.println(move.toString());

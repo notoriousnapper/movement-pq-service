@@ -1,18 +1,15 @@
 package controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static controllers.MoveEnum.PRIORITY;
 
 @RestController
 //@RequestMapping("/move")
@@ -27,6 +24,7 @@ public class MoveController {
     @GetMapping("/move")
     @ResponseBody
     public List<Move> getAllMoves(
+            @RequestParam String filter
     ) {
 
         List<Move> moves = new ArrayList<>();
@@ -36,6 +34,14 @@ public class MoveController {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+
+        if (filter.equals(PRIORITY.toString())){
+            moves = moves.stream().filter(
+                    item -> item.priority <= 1 // 0 is "NO QUESTIONS"
+            ).collect(Collectors.toList());
+            Collections.sort(moves);
         }
 
         return moves;
@@ -58,9 +64,10 @@ public class MoveController {
         return moves;
     }
 
+    // add move record
     @PostMapping("/move")
     @ResponseBody
-    @CrossOrigin(origins = "http://localhost:3000") // TODO: Delete once figure out
+    @CrossOrigin(origins = {"http://localhost:9999" })
     public Move postMove(
             @RequestBody Map<String, String> payload){
 //            @RequestBody Move move){

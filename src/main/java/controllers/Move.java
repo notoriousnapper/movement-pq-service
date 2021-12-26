@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
  *  release techniques, motions in martial arts
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Move {
+public class Move implements Comparable<Move>{
 
     // Order is HardCoded for now!
     @JsonProperty("id")
@@ -38,13 +38,21 @@ public class Move {
     @JsonProperty("dateLastDone")
     String  dateLastDone; // For PriorityQueue // Randomizer
 
+    @JsonProperty("tags")
     String[] tags;
 
+    @JsonProperty("imageURL")
     String imageURL; // Using Dropshare
 
     @Override
     public String toString(){
         return String.format("This move is called %s of type %s. " +
                 "It is recorded using %s", name, type, recordType);
+    }
+
+
+    @Override
+    public int compareTo(Move o) {
+        return this.priority - o.priority;
     }
 }
