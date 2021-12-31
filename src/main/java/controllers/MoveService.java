@@ -93,7 +93,13 @@ public class MoveService {
                 record.setMove(move);
                 record.setMoveId(Integer.valueOf(row[0]));
                 record.setRecordValue(row[5]);
-                record.setDatetime(new Date().toString());
+                // TODO: Important
+                if (row[4] != null && "".equals(row[4])){
+                    record.setDatetime(new Date().toString());
+                }
+                    record.setDatetime(row[4]);
+                // TODO: its setting NEW, with every GET!
+                // -> Its setting NEW
                 moveRecords.add(record);
 
 

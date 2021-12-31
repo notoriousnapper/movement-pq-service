@@ -24,7 +24,7 @@ public class MoveController {
     @GetMapping("/move")
     @ResponseBody
     public List<Move> getAllMoves(
-            @RequestParam String filter
+            @RequestParam(required = false) String filter
     ) {
 
         List<Move> moves = new ArrayList<>();
@@ -37,11 +37,14 @@ public class MoveController {
         }
 
 
-        if (filter.equals(PRIORITY.toString())){
-            moves = moves.stream().filter(
-                    item -> item.priority <= 1 // 0 is "NO QUESTIONS"
-            ).collect(Collectors.toList());
-            Collections.sort(moves);
+        if (filter != (null)){
+            // TODO: Add in clause for nothing, empty string, might be mistake
+            if (filter.equals(PRIORITY.toString())){
+                moves = moves.stream().filter(
+                        item -> item.priority <= 1 // 0 is "NO QUESTIONS"
+                ).collect(Collectors.toList());
+                Collections.sort(moves);
+            }
         }
 
         return moves;
@@ -64,10 +67,10 @@ public class MoveController {
         return moves;
     }
 
-    // add move record
+    // Adding records of moves, exercises
     @PostMapping("/move")
     @ResponseBody
-    @CrossOrigin(origins = {"http://localhost:9999" })
+    @CrossOrigin(origins = {"http://localhost:3000" })
     public Move postMove(
             @RequestBody Map<String, String> payload){
 //            @RequestBody Move move){
