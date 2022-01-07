@@ -1,5 +1,7 @@
 package controllers;
 
+import model.Move;
+import model.MoveRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,12 +11,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static controllers.MoveEnum.PRIORITY;
+import static model.MoveEnum.PRIORITY;
 
 @RestController
-//@RequestMapping("/move")
-//@Controller
-
 public class MoveController {
 
 
@@ -41,7 +40,7 @@ public class MoveController {
             // TODO: Add in clause for nothing, empty string, might be mistake
             if (filter.equals(PRIORITY.toString())){
                 moves = moves.stream().filter(
-                        item -> item.priority <= 1 // 0 is "NO QUESTIONS"
+                        item -> item.getPriority() <= 1 // 0 is "NO QUESTIONS"
                 ).collect(Collectors.toList());
                 Collections.sort(moves);
             }

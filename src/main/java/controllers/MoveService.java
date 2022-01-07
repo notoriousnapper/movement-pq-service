@@ -1,20 +1,35 @@
 package controllers;
 
 import com.opencsv.CSVWriter;
+import model.Move;
+import model.MoveRecord;
+import util.CSVParser;
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.Reader;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
 @Component
+@Data
 public class MoveService {
+
+    // TODO: Move to somewhere else for cache?
+    private Map<Integer, Move> moveMap;
+
+    public MoveService() throws Exception {
+
+        List<Move> moves = this.getAllMoves();
+        moveMap = new HashMap<>();
+        for (Move move : moves){
+            moveMap.put(move.getId(), move);
+        }
+    }
 
     public void addRecord(Move move, String recordValue) throws IOException, URISyntaxException {
             // first create file object for file placed at location
@@ -62,20 +77,11 @@ public class MoveService {
     // TODO: Improve*
     public List<MoveRecord> getAllMoveRecords() throws Exception {
 
-        List<Move> moves = getAllMoves();
-        Map<Integer, Move> moveMap = new HashMap<>();
-        for (Move move : moves){
-           moveMap.put(move.getId(), move);
-        }
 
         List<MoveRecord> moveRecords = new ArrayList<>();
 
         Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moverecords.csv").toURI()));
         List<String[]> csvData  = CSVParser.readAll(reader);
-
-        // Skip first part
-//        if (testMovesFormat(csvData.get(0))) {
-            // TODO: check if column tiles exist
 
             for(String[] row : csvData){
                 Move move = new Move();
@@ -86,7 +92,7 @@ public class MoveService {
                 else {
 //                    move.setId(Integer.valueOf(row[0]));
                     System.out.println(row[0] + "  values");
-                    move = moveMap.get(Integer.valueOf(row[0]));
+                    move = this.getMoveMap().get(Integer.valueOf(row[0]));
                 }
 
                 MoveRecord record = new MoveRecord();
@@ -112,6 +118,41 @@ public class MoveService {
         return moveRecords;
 
 
+
+    }
+    // TODO: Increase performance with better algorithms* // or overall rewrite
+    public List<MoveRecord> getAllMoveRecordsById(Integer id) throws Exception {
+
+        // TODO: get only the one by ID*
+        List<MoveRecord> moveRecords = new ArrayList<>();
+
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moverecords.csv").toURI()));
+        List<String[]> csvData  = CSVParser.readAll(reader);
+
+        for(String[] row : csvData){
+
+            if (row[0].equals(String.valueOf(id))){ // Match of String
+
+                Move move = new Move();
+                MoveRecord record = new MoveRecord();
+                record.setMove(move);
+                record.setMoveId(Integer.valueOf(row[0]));
+                record.setRecordValue(row[5]);
+                // TODO: Important
+                if (row[4] != null && "".equals(row[4])){
+                    record.setDatetime(new Date().toString());
+                }
+                record.setDatetime(row[4]);
+                // TODO: its setting NEW, with every GET!
+                // -> Its setting NEW
+                moveRecords.add(record);
+            }
+
+
+
+
+        }
+        return moveRecords;
 
     }
 
@@ -173,4 +214,7 @@ public class MoveService {
                 && strings[5].equals("DateLastDone");
     }
 
+    public Map<Integer, Move> getMoveMap() {
+        return moveMap;
+    }
 }

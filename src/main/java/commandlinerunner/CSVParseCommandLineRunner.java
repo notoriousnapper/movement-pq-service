@@ -1,5 +1,8 @@
-package controllers;
+package commandlinerunner;
 
+import util.CSVParser;
+import model.Move;
+import controllers.MoveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+//@Component
 public class CSVParseCommandLineRunner implements CommandLineRunner {
 //
 
@@ -24,7 +27,7 @@ public class CSVParseCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Reader reader = Files.newBufferedReader(Paths.get(
-                ClassLoader.getSystemResource("csv/moves-old.csv").toURI())); // Requires '/" for some reason
+                ClassLoader.getSystemResource("csv/moves.csv").toURI())); // Requires '/" for some reason
         List<String[]> csvData  = CSVParser.readAll(reader);
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
@@ -35,10 +38,7 @@ public class CSVParseCommandLineRunner implements CommandLineRunner {
         addMove.setId(1);
         addMove.setName("pull lat");
         addMove.setRecordType("Duration");
-//        addMove.setRecordValue("30s");
         addMove.setDateLastDone(dtf.format(now));
-
-        moveService.addRecord(addMove, "30s");
 
         // Skip first part
         if (moveService.testMovesFormat(csvData.get(0))) {
