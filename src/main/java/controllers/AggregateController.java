@@ -68,7 +68,7 @@ public class AggregateController {
             for (Integer id : moveRecords.keySet()){
                 Aggregate aggregate = new Aggregate();
 
-                // Sum of occurence vs. values
+                // TODO: Sum of occurence vs. values
                 if ("sum".equals(aggregateRequest.getAggregateType())){
                     aggregate.setAggregateValue(
                             moveRecords.get(id).stream().mapToInt((a)->
@@ -86,13 +86,13 @@ public class AggregateController {
                                         }
                                         record = sb.toString();
                                     }
-                                    return (a.getRecordValue().equals("null") ||
-                                            a.getRecordValue() == null ||
+                                    return (a.getRecordValue() == null ||
+                                            a.getRecordValue().equals("null") ||
                                             a.getRecordValue().equals(""))?
                                             1: Integer.valueOf(record);
                                     }
 
-                                    ).sum() //TODO: - if string -
+                                    ).sum()
 
                     );
                     aggregate.setMove(moveService.getMoveMap().get(Integer.valueOf(id)));
@@ -108,7 +108,7 @@ public class AggregateController {
 
         // Sketchy, need to record value separate without string, currently recording as
         // "40s" vs. 40 in value, and then other recordTypeMetric - is in "seconds'
-        // Todo: logic for "nulls" means theyy are recordType "justdo" vs. seconds, minutes, etc.
+        // Todo: logic for "nulls" means they are recordType "justdo" vs. seconds, minutes, etc.
         return aggregateList;
     }
 }

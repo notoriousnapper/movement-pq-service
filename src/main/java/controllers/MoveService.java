@@ -57,7 +57,7 @@ public class MoveService {
                 ;
 
                 //Create record
-                String [] record = sb.toString().split(",");
+                String [] record = sb.toString().split(","); // TODO - this is the tricky addition! any commas in first name will mess up
 //                        "4,David,Miller,Australia,30".split(",");
                 //Write the record to file
                 w.writeNext(record);
@@ -99,7 +99,7 @@ public class MoveService {
                 record.setMove(move);
                 record.setMoveId(Integer.valueOf(row[0]));
                 record.setRecordValue(row[5]);
-                // TODO: Important
+
                 if (row[4] != null && "".equals(row[4])){
                     record.setDatetime(new Date().toString());
                 }
