@@ -189,9 +189,7 @@ public class MoveService {
                 move.setRecordType(row[3]);
                 move.setDateLastDone(row[5]);
                 move.setImageURL(row[6]);
-
-
-                System.out.println(move.toString());
+                move.setDescription(row[7]);
 
                 moves.add(move);
             }

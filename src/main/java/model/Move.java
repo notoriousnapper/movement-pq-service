@@ -44,6 +44,9 @@ public class Move implements Comparable<Move>{
     @JsonProperty("imageURL")
     String imageURL; // Using Dropshare
 
+    @JsonProperty("description")
+    String description; // Using Dropshare
+
     @Override
     public String toString(){
         return String.format("This move is called %s of type %s. " +
