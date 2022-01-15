@@ -2,7 +2,8 @@ package model;
 
 public enum MoveEnum {
 
-    PRIORITY("PRIORITY");
+    PRIORITY("PRIORITY"),
+    ATOM_SIZE_DESCENDING("ATOM_SIZE_DESCENDING");
 
     private final String text;
 

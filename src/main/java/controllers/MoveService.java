@@ -21,6 +21,7 @@ public class MoveService {
 
     // TODO: Move to somewhere else for cache?
     private Map<Integer, Move> moveMap;
+    private Map<String, Integer> typeMapBySize; // 1 is largest atomsize
 
     public MoveService() throws Exception {
 
@@ -29,6 +30,13 @@ public class MoveService {
         for (Move move : moves){
             moveMap.put(move.getId(), move);
         }
+        typeMapBySize = new HashMap<>();
+        typeMapBySize.put("Flow", 1);
+        typeMapBySize.put("Workout", 2);
+        typeMapBySize.put("Affirmation", 3);
+        typeMapBySize.put("TechniqueRepeat", 4);
+        typeMapBySize.put("Stretch", 5);
+        typeMapBySize.put("Release", 6);
     }
 
     public void addRecord(Move move, String recordValue) throws IOException, URISyntaxException {
@@ -36,8 +44,6 @@ public class MoveService {
             // specified by filepath
 
         // TODO: Doesn't work in jar? // SHOULD be in target?
-
-
             try {
                 CSVWriter w = new CSVWriter(new FileWriter(
                         ClassLoader.getSystemResource("csv/moverecords.csv").toURI().getPath(),
