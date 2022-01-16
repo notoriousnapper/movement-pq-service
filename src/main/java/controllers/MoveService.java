@@ -31,6 +31,7 @@ public class MoveService {
             moveMap.put(move.getId(), move);
         }
         typeMapBySize = new HashMap<>();
+        typeMapBySize.put("Ritual", 0);
         typeMapBySize.put("Flow", 1);
         typeMapBySize.put("Workout", 2);
         typeMapBySize.put("Affirmation", 3);
