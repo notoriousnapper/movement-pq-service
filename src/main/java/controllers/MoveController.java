@@ -126,9 +126,6 @@ public class MoveController {
         move.setDateLastDone(String.valueOf(java.time.LocalDate.now()));
 
 
-        // tODO: Do test to make sure sets right things
-
-
         try {
             moveService.addRecord(move, (String) payload.get("recordValue"));
 

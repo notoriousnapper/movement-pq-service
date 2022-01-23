@@ -17,18 +17,17 @@ public class AggregateController {
     @Autowired
     MoveService moveService;
 
-    @GetMapping("/aggregates")
+    @PostMapping("/aggregates")
     @ResponseBody
+    @CrossOrigin(origins = {"http://localhost:3000" })
     /*
       Return aggregate object, with name, move integrated, and
       the aggregate as needed!
       for now, its just the aggregate value for total (sum)
 
-      // Add list of id vs. id
-      // Improve runtime*
+      AllFilter returns all items, ignores filter by ID
      */
     public List<Aggregate> getMoveAggregateByIds(
-            @RequestParam(required = false) String allFilter,
             @RequestBody AggregateRequest aggregateRequest
             // TODO: if all flag, then returns all
             ) throws Exception {
@@ -40,7 +39,7 @@ public class AggregateController {
 
         Map<Integer, List<MoveRecord>> moveRecords = new HashMap<>();
         List<Aggregate> aggregateList = new ArrayList<>();
-        if (allFilter != null && aggregateRequest.getAllFilter() == true){
+        if (aggregateRequest.getShowAllAggregates() != null && aggregateRequest.getShowAllAggregates() == true){
               moveService.getAllMoveRecords().forEach(
                       record -> {
                           if (moveRecords.containsKey(record.getMoveId())){
