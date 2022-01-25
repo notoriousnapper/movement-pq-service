@@ -13,7 +13,6 @@ import java.util.Map;
 @RestController
 public class AggregateController {
 
-
     @Autowired
     MoveService moveService;
 

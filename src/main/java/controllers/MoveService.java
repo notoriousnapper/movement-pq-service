@@ -197,6 +197,7 @@ public class MoveService {
                 move.setDateLastDone(row[5]);
                 move.setImageURL(row[6]);
                 move.setDescription(row[7]);
+                move.setTags(row[8].split(","));
 
                 moves.add(move);
             }
