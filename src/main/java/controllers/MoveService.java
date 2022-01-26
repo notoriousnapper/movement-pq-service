@@ -19,7 +19,7 @@ import java.util.*;
 @Data
 public class MoveService {
 
-    // TODO: Move to somewhere else for cache?
+
     private Map<Integer, Move> moveMap;
     private Map<String, Integer> typeMapBySize; // 1 is largest atomsize
 
@@ -52,8 +52,6 @@ public class MoveService {
                         ));
 
                 // Move ID, MoveName, RecordType, Value, Date
-
-
                 StringBuilder sb = new StringBuilder();
                 sb.append(move.getId()).append(",")
                         .append(move.getName()).append(",")
@@ -65,7 +63,6 @@ public class MoveService {
 
                 //Create record
                 String [] record = sb.toString().split(","); // TODO - this is the tricky addition! any commas in first name will mess up
-//                        "4,David,Miller,Australia,30".split(",");
                 //Write the record to file
                 w.writeNext(record);
 
