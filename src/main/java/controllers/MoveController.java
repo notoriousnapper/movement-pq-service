@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static model.MoveEnum.*;
+import static model.MoveEnumSorting.*;
 
 @RestController
 public class MoveController {

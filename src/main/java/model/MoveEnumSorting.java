@@ -1,6 +1,6 @@
 package model;
 
-public enum MoveEnum {
+public enum MoveEnumSorting {
 
     PRIORITY("PRIORITY"),
     ATOM_SIZE_DESCENDING("ATOM_SIZE_DESCENDING");
@@ -10,7 +10,7 @@ public enum MoveEnum {
     /**
      * @param text
      */
-    MoveEnum(final String text) {
+    MoveEnumSorting(final String text) {
         this.text = text;
     }
 

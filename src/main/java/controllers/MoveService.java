@@ -3,6 +3,7 @@ package controllers;
 import com.opencsv.CSVWriter;
 import model.Move;
 import model.MoveRecord;
+import model.MoveTypeEnum;
 import util.CSVParser;
 import lombok.Data;
 import org.springframework.stereotype.Component;
@@ -31,13 +32,12 @@ public class MoveService {
             moveMap.put(move.getId(), move);
         }
         typeMapBySize = new HashMap<>();
-        typeMapBySize.put("Ritual", 0);
-        typeMapBySize.put("Flow", 1);
-        typeMapBySize.put("Workout", 2);
-        typeMapBySize.put("Affirmation", 3);
-        typeMapBySize.put("TechniqueRepeat", 4);
-        typeMapBySize.put("Stretch", 5);
-        typeMapBySize.put("Release", 6);
+
+        int i = 0;
+        for (MoveTypeEnum m : MoveTypeEnum.values()){
+            typeMapBySize.put(m.toString(), i);
+            i++;
+        }
     }
 
     public void addRecord(Move move, String recordValue) throws IOException, URISyntaxException {

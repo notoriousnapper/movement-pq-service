@@ -2,6 +2,7 @@ package controllers;
 
 import model.Aggregate;
 import model.MoveRecord;
+import model.MoveTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -84,10 +85,18 @@ public class AggregateController {
                                         }
                                         record = sb.toString();
                                     }
-                                    return (a.getRecordValue() == null ||
-                                            a.getRecordValue().equals("null") ||
-                                            a.getRecordValue().equals(""))?
-                                            1: Integer.valueOf(record);
+
+                                    String recordString = a.getRecordValue();
+
+                                    return (recordString == null ||
+                                            recordString.equals("null") ||
+                                            MoveTypeEnum.TEXT.toString().equals(a.getMove().getRecordType()) ||
+                                            recordString.equals(""))?
+                                            1:
+                                            (recordString.matches(".*[a-zA-Z].*"))
+                                            ? Integer.valueOf(recordString.replaceAll("[a-zA-Z]", ""))
+                                                    :
+                                            Integer.valueOf(record);
                                     }
 
                                     ).sum()

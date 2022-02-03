@@ -8,3 +8,6 @@
 
 01-25-22 | 5m
 - Cleanup, review code for new tests
+
+
+02-01-22 | Need to store value & record type (minute, second)
