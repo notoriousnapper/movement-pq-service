@@ -10,7 +10,8 @@ public enum MoveTypeEnum {
     STRETCH("Stretch"),
     RELEASE("Release"),
     TIK("Tik"),
-    TEXT("Text");
+    TEXT("Text"),
+    CONDITION("Condition");
 
     private final String text;
 
