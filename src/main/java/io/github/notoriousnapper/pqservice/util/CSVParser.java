@@ -1,4 +1,4 @@
-package util;
+package io.github.notoriousnapper.pqservice.util;
 
 import com.opencsv.CSVReader;
 

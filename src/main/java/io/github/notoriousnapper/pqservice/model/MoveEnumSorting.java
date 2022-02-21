@@ -1,4 +1,4 @@
-package model;
+package io.github.notoriousnapper.pqservice.model;
 
 public enum MoveEnumSorting {
 

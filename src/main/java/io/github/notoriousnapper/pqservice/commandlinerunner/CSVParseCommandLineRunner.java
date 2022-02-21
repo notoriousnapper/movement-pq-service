@@ -1,8 +1,10 @@
-package commandlinerunner;
+package io.github.notoriousnapper.pqservice.commandlinerunner;
 
-import util.CSVParser;
-import model.Move;
-import controllers.MoveService;
+import io.github.notoriousnapper.pqservice.model.Customer;
+import io.github.notoriousnapper.pqservice.repository.ICustomerRepo;
+import io.github.notoriousnapper.pqservice.service.MoveService;
+import io.github.notoriousnapper.pqservice.util.CSVParser;
+import io.github.notoriousnapper.pqservice.model.Move;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -15,17 +17,30 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Component
+@Component
 public class CSVParseCommandLineRunner implements CommandLineRunner {
 //
 
     @Autowired
     MoveService moveService;
 
+    @Autowired
+    ICustomerRepo customerRepo;
+
     // TODO: write unit Tests for self (TDD style - practice!
     // TODO: tDd you got this!
     @Override
     public void run(String... args) throws Exception {
+
+      Customer customer = new Customer();
+      customer.setName("jesse");
+      customerRepo.save(customer);
+      System.out.println("customer saved");
+
+
+
+
+
         Reader reader = Files.newBufferedReader(Paths.get(
                 ClassLoader.getSystemResource("csv/moves.csv").toURI())); // Requires '/" for some reason
         List<String[]> csvData  = CSVParser.readAll(reader);
@@ -33,6 +48,16 @@ public class CSVParseCommandLineRunner implements CommandLineRunner {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         System.out.println(dtf.format(now));
+
+
+        // SUBSITUTE FOR TEST ATM
+        List<Move> movesList = moveService.getAllMoves();
+        for (Move m : movesList) {
+            if (!moveService.getTypeMapBySize().containsKey(m.getRecordType())) {
+                throw new Exception("CSV parsing failed - Type of move not recognized for " + m.toString());
+            }
+        }
+        //
 
         Move addMove = new Move();
         addMove.setId(1);

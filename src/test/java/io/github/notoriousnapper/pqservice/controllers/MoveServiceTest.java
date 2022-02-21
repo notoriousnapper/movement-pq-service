@@ -1,10 +1,11 @@
-package controllers;
+package io.github.notoriousnapper.pqservice.controllers;
 
 
 import java.util.List;
-import model.Move;
+import io.github.notoriousnapper.pqservice.model.Move;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import io.github.notoriousnapper.pqservice.service.MoveService;
 
 class MoveServiceTest {
 

@@ -1,8 +1,8 @@
-package controllers;
+package io.github.notoriousnapper.pqservice.controllers;
 
-import model.Aggregate;
-import model.MoveRecord;
-import model.MoveTypeEnum;
+import io.github.notoriousnapper.pqservice.model.Aggregate;
+import io.github.notoriousnapper.pqservice.model.MoveRecord;
+import io.github.notoriousnapper.pqservice.model.MoveTypeEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import io.github.notoriousnapper.pqservice.service.MoveService;
 
 @RestController
 public class AggregateController {

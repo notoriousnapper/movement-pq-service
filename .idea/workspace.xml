@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="299d0a98-99bc-4308-a193-50f08dbd8924" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="299d0a98-99bc-4308-a193-50f08dbd8924" name="Default Changelist" comment="Tracking Text record types now&#10;- Priority Queue change types into Enum&#10;- Added edge case for aggregating">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/RandomizerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/repository/ICustomerRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/RandomizerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/csv/moves.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csv/moves.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MoveService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/MoveService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PQServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/PQServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/commandlinerunner/CSVParseCommandLineRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AggregateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AggregateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MoveController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/MoveController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/MoveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Aggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/Aggregate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveEnumSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveEnumSorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MoveUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/CSVParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/util/CSVParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/notoriousnapper/pqservice/controllers/MoveServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PQServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MoveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/MoveService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/csv/moverecords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/csv/moverecords.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/csv/moves.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/csv/moves.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,195 +44,112 @@
     <favorites_list name="priorityqueue" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.78768575">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="153">
-                    <caret line="9" column="17" selection-start-line="11" selection-end-line="12" selection-end-column="61" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/target/classes/csv/moverecords.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="260" column="39" lean-forward="true" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
-                  <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveEnumSorting.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="23">
-                  <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveRecord.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="140">
-                  <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moverecords.csv">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moves.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MoveService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2873">
-                  <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveEnumSorting.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="24" selection-start-line="24" selection-end-line="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MoveController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="149">
-                  <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="204">
-                    <caret line="12" column="17" selection-start-line="11" selection-end-line="12" selection-end-column="61" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/target/classes/csv/moves-old-01-03-22.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/target/classes/csv/moves.csv">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveRecord.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/PQServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/target/classes/csv/moverecords.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="262" column="68" lean-forward="true" selection-start-line="262" selection-start-column="68" selection-end-line="262" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/io/github/notoriousnapper/pqservice/controllers/MoveServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/commandlinerunner/CSVParseCommandLineRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-52">
+              <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/RandomizerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-257">
+              <caret line="70" column="52" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moverecords.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moves.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1938">
+              <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -228,11 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>move</find>
-      <find>moveMap</find>
-      <find>moves.csv</find>
-      <find>old</find>
-      <find>moverecords</find>
       <find>getAllMov</find>
       <find>2022-01-06</find>
       <find>3 Treasure</find>
@@ -254,10 +182,15 @@
       <find>recordString</find>
       <find>a.getRecordValue()</find>
       <find>\n</find>
-      <find>30</find>
       <find>30min</find>
       <find>&quot;</find>
       <find>2022-02-07</find>
+      <find>moveserv</find>
+      <find>&quot;30</find>
+      <find>values</find>
+      <find>30</find>
+      <find>null</find>
+      <find>cat</find>
     </findStrings>
     <replaceStrings>
       <replace>Morning 3 Treasure (priority) 3X45sX15s</replace>
@@ -270,11 +203,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/EventSummaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/csv/moverecords.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/PQServiceApplication.java" />
         <option value="$PROJECT_DIR$/target/classes/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MoveRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/MoveUtils.java" />
@@ -288,26 +218,41 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Aggregate.java" />
         <option value="$PROJECT_DIR$/src/main/resources/csv/moves.csv" />
         <option value="$PROJECT_DIR$/src/main/java/model/Move.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/AggregateRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MoveController.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/model/MoveEnumSortingg.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MoveEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MoveEnumSorting.java" />
         <option value="$PROJECT_DIR$/src/main/java/controllers/AggregateController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/MoveService.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/util/LeetCodeTestClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MoveService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/ICustomerRepo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/service/MoveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/MoveService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/AggregateRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/MoveController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/RandomizerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PQServiceApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/RandomizerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/RandomizerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/MoveRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/commandlinerunner/CSVParseCommandLineRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/PQServiceApplication.java" />
         <option value="$PROJECT_DIR$/target/classes/csv/moverecords.csv" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="53" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -315,6 +260,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,6 +272,11 @@
             <path>
               <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
               <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
+              <item name="h2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,7 +298,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commandlinerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="pqservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
@@ -354,67 +306,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="LeetCodeTestClass.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="csv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="priorityqueue" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pqservice" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,175 +326,11 @@
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="csv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="invoke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sun" type="462c0819:PsiDirectoryNode" />
-              <item name="instrument" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="sun" type="462c0819:PsiDirectoryNode" />
-              <item name="launcher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.4" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-databind-2.12.4.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="jackson-databind-2.12.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="databind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.projectlombok:lombok:1.18.20" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.projectlombok:lombok:1.18.20" type="70bed36:NamedLibraryElementNode" />
-              <item name="lombok-1.18.20.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:2.5.4" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:2.5.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-2.5.4.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework.boot:spring-boot:2.5.4" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-boot-2.5.4.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.3.9.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.3.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.3.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.3.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="priorityqueue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.3.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.3.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="method" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -627,6 +355,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.github.notoriousnapper.pqservice" />
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -635,11 +364,14 @@
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="model" />
       <recent name="controllers" />
+      <recent name="service" />
+      <recent name="model" />
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/service" />
       <recent name="$PROJECT_DIR$/src/main/resources/csv" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
@@ -658,7 +390,7 @@
   </component>
   <component name="RunManager" selected="Application.PQServiceApplication">
     <configuration name="PQServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PQServiceApplication" />
+      <option name="MAIN_CLASS_NAME" value="io.github.notoriousnapper.pqservice.PQServiceApplication" />
       <module name="priorityqueue" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -787,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643867400519</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Cleaned records of entries with extra commas&#10;- commas causing issues, need to remove them on user submission or before&#10;- tests needed for commas&#10;- added Condition enum">
+      <created>1644374374374</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1644374374374</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -800,10 +539,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24151857" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21324718" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -812,7 +551,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1868613" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26861313" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3459854" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -849,89 +588,108 @@
     <MESSAGE value="Added TestNG for testing" />
     <MESSAGE value="Adding new moves with tags (relax, eod, spartan)" />
     <MESSAGE value="Tracking Text record types now&#10;- Priority Queue change types into Enum&#10;- Added edge case for aggregating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tracking Text record types now&#10;- Priority Queue change types into Enum&#10;- Added edge case for aggregating" />
+    <MESSAGE value="Cleaned records of entries with extra commas&#10;- commas causing issues, need to remove them on user submission or before&#10;- tests needed for commas&#10;- added Condition enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned records of entries with extra commas&#10;- commas causing issues, need to remove them on user submission or before&#10;- tests needed for commas&#10;- added Condition enum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PQServiceApplication.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/PQServiceApplication.java</url>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>118</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>119</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>85</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>86</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>66</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>67</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MoveService.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/MoveService.java</url>
           <line>55</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MoveService.java</url>
-          <line>197</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/MoveService.java</url>
+          <line>196</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>35</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>39</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MoveController.java</url>
-          <line>113</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/MoveController.java</url>
+          <line>127</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MoveController.java</url>
-          <line>129</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/MoveController.java</url>
+          <line>143</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java</url>
-          <line>96</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/MoveService.java</url>
-          <line>37</line>
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/RandomizerService.java</url>
+          <line>61</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/RandomizerController.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -987,35 +745,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WorkoutSummaryController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/SleepSummaryController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/EventSummaryController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AtomController.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6324">
-          <caret line="409" selection-start-line="409" selection-end-line="409" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre/lib/rt.jar!/sun/instrument/InstrumentationImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4029">
-          <caret line="258" selection-start-line="258" selection-end-line="258" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8228">
-          <caret line="533" selection-start-line="533" selection-end-line="533" />
-          <folding>
-            <element signature="e#18578#18579#0" expanded="true" />
-            <element signature="e#18620#18621#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11339">
@@ -1065,13 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/csv/moves-old.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1093,20 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PQServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1121,7 +829,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/CSVParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/util/CSVParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1135,38 +843,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/controllers/MoveService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#6755#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/controllers/MoveService.class" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/moves.csv" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar!/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AggregateRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,14 +867,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Aggregate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/Aggregate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1201,31 +877,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveEnumSorting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/csv/moves-old-01-03-22.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/LeetCodeTestClass.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/util/LeetCodeTestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
@@ -1236,41 +888,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/csv/moves-old-01-03-22.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/csv/moves.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="1989">
           <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moves.csv">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Randomizer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/repository/ICustomerRepo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/MoveTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MoveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="183" column="33" selection-start-line="183" selection-start-column="33" selection-end-line="183" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/MoveController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.5.4/spring-boot-autoconfigure-2.5.4.jar!/org/springframework/boot/autoconfigure/domain/EntityScan.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/priorityqueue.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/h2/demodb.mv.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1284,27 +958,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/controllers/MoveServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveEnumSorting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/RandomizerService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/commandlinerunner/CSVParseCommandLineRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/MoveService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        <state relative-caret-position="134">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/AggregateController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/MoveController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
+        <state relative-caret-position="220">
+          <caret line="122" column="52" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/service/RandomizerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/github/notoriousnapper/pqservice/controllers/MoveServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/RandomizerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="67" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1314,10 +1067,54 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moverecords.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/csv/moves.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/model/MoveRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/commandlinerunner/CSVParseCommandLineRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/PQServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="13" column="67" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/notoriousnapper/pqservice/controllers/AggregateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="70" column="52" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/csv/moverecords.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="260" column="39" lean-forward="true" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
+        <state relative-caret-position="63">
+          <caret line="262" column="68" lean-forward="true" selection-start-line="262" selection-start-column="68" selection-end-line="262" selection-end-column="68" />
         </state>
       </provider>
     </entry>

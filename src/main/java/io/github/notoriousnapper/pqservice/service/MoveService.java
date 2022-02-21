@@ -1,10 +1,10 @@
-package controllers;
+package io.github.notoriousnapper.pqservice.service;
 
 import com.opencsv.CSVWriter;
-import model.Move;
-import model.MoveRecord;
-import model.MoveTypeEnum;
-import util.CSVParser;
+import io.github.notoriousnapper.pqservice.model.Move;
+import io.github.notoriousnapper.pqservice.model.MoveRecord;
+import io.github.notoriousnapper.pqservice.model.MoveTypeEnum;
+import io.github.notoriousnapper.pqservice.util.CSVParser;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
@@ -84,7 +84,8 @@ public class MoveService {
 
         List<MoveRecord> moveRecords = new ArrayList<>();
 
-        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moverecords.csv").toURI()));
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(
+            "csv/moverecords.csv").toURI()));
         List<String[]> csvData  = CSVParser.readAll(reader);
 
             for(String[] row : csvData){
@@ -130,7 +131,8 @@ public class MoveService {
         // TODO: get only the one by ID*
         List<MoveRecord> moveRecords = new ArrayList<>();
 
-        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moverecords.csv").toURI()));
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(
+            "csv/moverecords.csv").toURI()));
         List<String[]> csvData  = CSVParser.readAll(reader);
 
         for(String[] row : csvData){
@@ -162,7 +164,8 @@ public class MoveService {
 
     public List<Move> getAllMoves() throws Exception {
 
-        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("csv/moves.csv").toURI()));
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(
+            "csv/moves.csv").toURI()));
         List<String[]> csvData  = CSVParser.readAll(reader);
         List<Move> moves = new ArrayList<>();
 

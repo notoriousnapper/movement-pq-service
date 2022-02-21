@@ -1,21 +1,22 @@
+package io.github.notoriousnapper.pqservice;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "controllers")
-
+@ComponentScan(basePackages = {"io/github/notoriousnapper/pqservice/controllers", "io/github/notoriousnapper/pqservice/repository",
+		"io/github/notoriousnapper/pqservice/service"})
+@EnableJpaRepositories("io/github/notoriousnapper/pqservice/repository")
+@EntityScan("io/github/notoriousnapper/pqservice/model")
 
 public class PQServiceApplication {
-
-//	private static final Logger log = LoggerFactory.getLogger(PQServiceApplication.class);
-//
-//	@Autowired
-//    SleepSummaryService sleepSummaryService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(PQServiceApplication.class, args);

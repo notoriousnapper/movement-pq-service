@@ -1,9 +1,8 @@
-package controllers;
+package io.github.notoriousnapper.pqservice.controllers;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
-
 import java.util.List;
+import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
