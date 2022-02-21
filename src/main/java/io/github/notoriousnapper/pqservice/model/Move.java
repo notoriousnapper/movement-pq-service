@@ -18,7 +18,7 @@ public class Move implements Comparable<Move>{
 
     // Order is HardCoded for now!
     @JsonProperty("id")
-    Integer id;
+    Long id;
 
     @JsonProperty("name")
     String name;

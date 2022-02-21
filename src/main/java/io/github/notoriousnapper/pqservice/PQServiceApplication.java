@@ -11,8 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"io/github/notoriousnapper/pqservice/controllers", "io/github/notoriousnapper/pqservice/repository",
-		"io/github/notoriousnapper/pqservice/service"})
+@ComponentScan(basePackages = {"io/github/notoriousnapper/pqservice"})
 @EnableJpaRepositories("io/github/notoriousnapper/pqservice/repository")
 @EntityScan("io/github/notoriousnapper/pqservice/model")
 

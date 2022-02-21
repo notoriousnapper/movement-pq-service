@@ -38,7 +38,7 @@ public class AggregateController {
 
         }
 
-        Map<Integer, List<MoveRecord>> moveRecords = new HashMap<>();
+        Map<Long, List<MoveRecord>> moveRecords = new HashMap<>();
         List<Aggregate> aggregateList = new ArrayList<>();
         if (aggregateRequest.getShowAllAggregates() != null && aggregateRequest.getShowAllAggregates() == true){
               moveService.getAllMoveRecords().forEach(
@@ -58,14 +58,14 @@ public class AggregateController {
 
             // Build map differently
             for (String id : aggregateRequest.idList){
-                moveRecords.put(Integer.valueOf(id), (moveService.getAllMoveRecordsById(Integer.valueOf(id))));
+                moveRecords.put(Long.valueOf(id), (moveService.getAllMoveRecordsById(Long.valueOf(id))));
             }
 
         }
         try {
             // ToDO: check if things are null - moveId shouldn't be
             // TODO: ENUM
-            for (Integer id : moveRecords.keySet()){
+            for (Long id : moveRecords.keySet()){
                 Aggregate aggregate = new Aggregate();
 
                 // TODO: Sum of occurence vs. values
@@ -103,7 +103,7 @@ public class AggregateController {
                                     ).sum()
 
                     );
-                    aggregate.setMove(moveService.getMoveMap().get(Integer.valueOf(id)));
+                    aggregate.setMove(moveService.getMoveMap().get(Long.valueOf(id)));
                 }
                 aggregate.setAggregateType(aggregateRequest.getAggregateType());
                 aggregateList.add(aggregate);

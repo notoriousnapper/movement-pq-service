@@ -121,12 +121,10 @@ public class MoveController {
     @CrossOrigin(origins = {"http://localhost:3000" })
     public Move postMove(
             @RequestBody Map<String, Object> payload){
-//            @RequestBody Move move){
-
         // Have best way to deal with nulls here*
         // Need new Record Move
         Move move = new Move();
-        move.setId(( Integer) payload.get("id"));
+        move.setId((Long) payload.get("id"));
         move.setName((String) payload.get("name"));
         move.setRecordType((String) payload.get("type"));
         move.setType((String) payload.get("recordType"));
