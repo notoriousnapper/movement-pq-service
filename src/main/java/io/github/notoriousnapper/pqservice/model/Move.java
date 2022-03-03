@@ -27,7 +27,7 @@ public class Move implements Comparable<Move>{
     String type;
 
     @JsonProperty("recordType")
-    String recordType; // Duration, Reps, WeightedReps, etc.
+    String recordType; // Duration, Reps, WeightedReps, Text, etc.
 
     @JsonProperty("priority")
     Integer priority;

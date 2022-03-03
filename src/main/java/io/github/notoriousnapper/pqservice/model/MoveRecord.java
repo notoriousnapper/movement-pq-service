@@ -14,6 +14,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -48,10 +50,17 @@ public class MoveRecord {
   @JsonProperty("dateTime")
   String datetime; // TODO: Figure out best practices!
 
-//  @CreationTimestamp
+  @Temporal(value= TemporalType.DATE)
+  @CreationTimestamp
   @Column(name = "created_at", nullable = false, updatable = false)
   private Date createdAt;
 
+  // To Allow for inserting past events on future dates when unable to log on exact day
+  @Temporal(value= TemporalType.DATE)
+  @Column(name = "true_record_date", nullable = false, updatable = true)
+  private Date trueRecordDate;
+
+  @Temporal(value= TemporalType.DATE)
   @UpdateTimestamp
   @Column(name = "updated_at")
   private Date updatedAt;

@@ -12,3 +12,7 @@ http://localhost:8080/h2-console/login.jsp
 
 
 02-01-22 | Need to store value & record type (minute, second)
+
+
+NOTE:
+Default to UTC timezone

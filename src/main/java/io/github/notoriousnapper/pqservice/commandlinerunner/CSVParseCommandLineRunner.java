@@ -39,6 +39,14 @@ public class CSVParseCommandLineRunner implements CommandLineRunner {
     // TODO: tDd you got this!
     @Override
     public void run(String... args) throws Exception {
+//        List<MoveRecord> records = moveService.getAllMoveRecords();
+////        // TODO: if already exists don't do anyting*
+////        // SAVED data in format I wanted*
+//        for (MoveRecord record : records) {
+//          Date createdAt = record.getCreatedAt();
+//          record.setTrueRecordDate(createdAt);
+//          moveRecordsRepo.save(record);
+//        }
 //
 //        List<MoveRecord> records = moveService.getAllMoveRecords();
 //        // TODO: if already exists don't do anyting*

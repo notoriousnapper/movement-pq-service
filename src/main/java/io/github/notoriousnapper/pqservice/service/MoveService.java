@@ -1,22 +1,25 @@
 package io.github.notoriousnapper.pqservice.service;
 
-import com.opencsv.CSVWriter;
+
 import io.github.notoriousnapper.pqservice.model.Move;
 import io.github.notoriousnapper.pqservice.model.MoveRecord;
 import io.github.notoriousnapper.pqservice.model.MoveTypeEnum;
 import io.github.notoriousnapper.pqservice.repository.IMoveRecordsRepo;
 import io.github.notoriousnapper.pqservice.util.CSVParser;
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.*;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 @Data
@@ -44,41 +47,49 @@ public class MoveService {
     }
   }
 
-  public void addRecord(Move move, String recordValue) throws IOException, URISyntaxException {
+  public void addRecord(Move move, String recordValue, Date trueRecordDate) throws IOException, URISyntaxException {
     // first create file object for file placed at location
     // specified by filepath
 
+    // TODO: - ideally should get move data from database not ccachhed just in case*
     // TODO: Doesn't work in jar? // SHOULD be in target?
-    try {
-      CSVWriter w = new CSVWriter(new FileWriter(
-          ClassLoader.getSystemResource("csv/moverecords.csv").toURI().getPath(),
-          true // Means write to end of file
-      ));
+    // TODO: Add test MoveId needs to be set before save*
+      MoveRecord moveRecord = new MoveRecord();
+      moveRecord.setMove(move);
+      moveRecord.setMoveId(move.getId());
+      moveRecord.setRecordValue(recordValue);
+      if (trueRecordDate == null){
+        moveRecord.setTrueRecordDate(Date.from(Instant.now()));
+      } else {
+        moveRecord.setTrueRecordDate(trueRecordDate);
+      }
+      moveRecordsRepo.save(moveRecord);
 
-      // Move ID, MoveName, RecordType, Value, Date
-      StringBuilder sb = new StringBuilder();
-      sb.append(move.getId()).append(",")
-          .append(move.getName()).append(",")
-          .append(move.getRecordType()).append(",")
-          .append(move.getRecordValue()).append(",")
-          .append(move.getDateLastDone()).append(",")
-          .append(recordValue); // value to record
-      ;
+//      CSVWriter w = new CSVWriter(new FileWriter(
+//          ClassLoader.getSystemResource("csv/moverecords.csv").toURI().getPath(),
+//          true // Means write to end of file
+//      ));
+//
+//      // Move ID, MoveName, RecordType, Value, Date
+//      StringBuilder sb = new StringBuilder();
+//      sb.append(move.getId()).append(",")
+//          .append(move.getName()).append(",")
+//          .append(move.getRecordType()).append(",")
+//          .append(move.getRecordValue()).append(",")
+//          .append(move.getDateLastDone()).append(",")
+//          .append(recordValue); // value to record
+//      ;
+//
+//      //Create record
+//      String[] record = sb.toString()
+//          .split(","); // TODO - this is the tricky addition! any commas in first name will mess up
+//      //Write the record to file
+//      w.writeNext(record);
+//
+//      //close the writer
+//      w.close();
 
-      //Create record
-      String[] record = sb.toString()
-          .split(","); // TODO - this is the tricky addition! any commas in first name will mess up
-      //Write the record to file
-      w.writeNext(record);
 
-      //close the writer
-      w.close();
-
-
-    } catch (IOException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
   }
 
   // Get all Move Records

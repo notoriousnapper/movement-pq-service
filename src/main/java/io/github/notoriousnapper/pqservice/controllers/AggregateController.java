@@ -35,7 +35,6 @@ public class AggregateController {
 
         if (aggregateRequest.getAggregateType() == null || aggregateRequest.getAggregateType().equals("")){
             // DO sth to eject*
-
         }
 
         Map<Long, List<MoveRecord>> moveRecords = new HashMap<>();
@@ -88,8 +87,12 @@ public class AggregateController {
                                     }
 
                                     String recordString = a.getRecordValue();
+                                      System.out.println("Record to aggregate" + recordString);
 
-                                    return (recordString == null ||
+                                      return (recordString == null ||
+                                             recordString.length() > 10 || // for large text, double check TODO:
+                                            recordString.contains("\n") || // for large text, double check TODO:
+                                            record.equals("") ||
                                             recordString.equals("null") ||
                                             MoveTypeEnum.TEXT.toString().equals(a.getMove().getRecordType()) ||
                                             recordString.equals(""))?

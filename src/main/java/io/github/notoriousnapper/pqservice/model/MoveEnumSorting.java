@@ -3,7 +3,8 @@ package io.github.notoriousnapper.pqservice.model;
 public enum MoveEnumSorting {
 
     PRIORITY("PRIORITY"),
-    ATOM_SIZE_DESCENDING("ATOM_SIZE_DESCENDING");
+    ATOM_SIZE_DESCENDING("ATOM_SIZE_DESCENDING"),
+    CURRENT_WEEK("CURRENT_WEEK");
 
     private final String text;
 
