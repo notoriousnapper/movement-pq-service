@@ -12,7 +12,7 @@ public class Aggregate {
     Move move;
 
     @JsonProperty("aggregateValue")
-    Integer aggregateValue;
+    Double aggregateValue;
 
     @JsonProperty("aggregateType")
     String aggregateType;

@@ -70,37 +70,41 @@ public class AggregateController {
                 // TODO: Sum of occurence vs. values
                 if ("sum".equals(aggregateRequest.getAggregateType())){
                     aggregate.setAggregateValue(
-                            moveRecords.get(id).stream().mapToInt((a)->
+                            moveRecords.get(id).stream().mapToDouble((a)->
                                     {
                                         // Todo: Cleanup method
-                                    String record = a.getRecordValue();
-                                    char lastChar = record.charAt(record.length()-1);
-                                    if ( Character.isLetter(lastChar)){
-                                        StringBuilder sb = new StringBuilder();
-                                        for (char c : record.toCharArray()){
-                                            if (Character.isLetter(c)){
-                                                break;
-                                            }
-                                            sb.append(c);
-                                        }
-                                        record = sb.toString();
+                                    String recordString = a.getRecordValue(); // Will not modify
+                                    String modifiedRecordValue = "";
+
+
+                                    if (recordString != null){
+                                      char lastChar = recordString.charAt(recordString.length()-1);
+                                      if ( Character.isLetter(lastChar)){
+                                          StringBuilder sb = new StringBuilder();
+                                          for (char c : recordString.toCharArray()){
+                                              if (Character.isLetter(c)){
+                                                  break;
+                                              }
+                                              sb.append(c);
+                                          }
+                                          modifiedRecordValue = sb.toString();
+                                      }
                                     }
 
-                                    String recordString = a.getRecordValue();
-                                      System.out.println("Record to aggregate" + recordString);
+                                      System.out.println("Record to aggregate" + modifiedRecordValue);
 
                                       return (recordString == null ||
                                              recordString.length() > 10 || // for large text, double check TODO:
                                             recordString.contains("\n") || // for large text, double check TODO:
-                                            record.equals("") ||
+                                            modifiedRecordValue.equals("") ||
                                             recordString.equals("null") ||
                                             MoveTypeEnum.TEXT.toString().equals(a.getMove().getRecordType()) ||
                                             recordString.equals(""))?
-                                            1:
+                                            1.0:
                                             (recordString.matches(".*[a-zA-Z].*"))
-                                            ? Integer.valueOf(recordString.replaceAll("[a-zA-Z]", ""))
+                                            ? Double.valueOf(recordString.replaceAll("[a-zA-Z]", ""))
                                                     :
-                                            Integer.valueOf(record);
+                                                        Double.valueOf(modifiedRecordValue);
                                     }
 
                                     ).sum()
