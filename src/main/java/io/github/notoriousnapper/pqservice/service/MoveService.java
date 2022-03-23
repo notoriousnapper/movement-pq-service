@@ -64,115 +64,24 @@ public class MoveService {
         moveRecord.setTrueRecordDate(trueRecordDate);
       }
       moveRecordsRepo.save(moveRecord);
-
-//      CSVWriter w = new CSVWriter(new FileWriter(
-//          ClassLoader.getSystemResource("csv/moverecords.csv").toURI().getPath(),
-//          true // Means write to end of file
-//      ));
-//
-//      // Move ID, MoveName, RecordType, Value, Date
-//      StringBuilder sb = new StringBuilder();
-//      sb.append(move.getId()).append(",")
-//          .append(move.getName()).append(",")
-//          .append(move.getRecordType()).append(",")
-//          .append(move.getRecordValue()).append(",")
-//          .append(move.getDateLastDone()).append(",")
-//          .append(recordValue); // value to record
-//      ;
-//
-//      //Create record
-//      String[] record = sb.toString()
-//          .split(","); // TODO - this is the tricky addition! any commas in first name will mess up
-//      //Write the record to file
-//      w.writeNext(record);
-//
-//      //close the writer
-//      w.close();
-
-
   }
+
+
+  public void deleteMoveRecord(MoveRecord moveRecord){
+        moveRecordsRepo.delete(moveRecord);
+  }
+
 
   // Get all Move Records
   // TODO: Improve*
   public List<MoveRecord> getAllMoveRecords() throws Exception {
-
     return moveRecordsRepo.findAll();
-//
-//        List < MoveRecord > moveRecords = new ArrayList<>();
-//
-//    Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(
-//        "csv/moverecords.csv").toURI()));
-//    List<String[]> csvData = CSVParser.readAll(reader);
-//
-//    for (String[] row : csvData) {
-//      Move move = new Move();
-//
-//      if (row[0] == null) {
-//        // THROW exception? What to do when?
-//      } else {
-////                    move.setId(Integer.valueOf(row[0]));
-//        System.out.println(row[0] + "  values");
-//        move = this.getMoveMap().get(Integer.valueOf(row[0]));
-//      }
-//
-//      MoveRecord record = new MoveRecord();
-//      record.setMove(move);
-//      record.setMoveId(Integer.valueOf(row[0]));
-//      record.setRecordValue(row[5]);
-//
-//      if (row[4] != null && "".equals(row[4])) {
-//        record.setDatetime(new Date().toString());
-//      }
-//      record.setDatetime(row[4]);
-//      // TODO: its setting NEW, with every GET!
-//      // -> Its setting NEW
-//      moveRecords.add(record);
-
-
-//    }
-//        }
-//        else {
-//            System.out.println("!\nERROR!\nCheck in CSV formatting or data. Check if fields are up-to-date");
-//        }
-
-//    return moveRecords;
   }
 
   // TODO: Increase performance with better algorithms* // or overall rewrite
   public List<MoveRecord> getAllMoveRecordsById(Long id) throws Exception {
 
       return moveRecordsRepo.findAllByMoveId(id);
-//    // TODO: get only the one by ID*
-//    List<MoveRecord> moveRecords = new ArrayList<>();
-//
-//    Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(
-//        "csv/moverecords.csv").toURI()));
-//    List<String[]> csvData = CSVParser.readAll(reader);
-
-//
-//    for (String[] row : csvData) {
-//
-//      if (row[0].equals(String.valueOf(id))) { // Match of String
-//
-//        Move move = new Move();
-//        MoveRecord record = new MoveRecord();
-//        record.setMove(move);
-//        record.setMoveId(Integer.valueOf(row[0]));
-//        record.setRecordValue(row[5]);
-//        // TODO: Important
-//        if (row[4] != null && "".equals(row[4])) {
-//          record.setDatetime(new Date().toString());
-//        }
-//        record.setDatetime(row[4]);
-//        // TODO: its setting NEW, with every GET!
-//        // -> Its setting NEW
-//        moveRecords.add(record);
-//      }
-//
-//
-//    }
-//    return moveRecords;
-
   }
 
   public List<Move> getAllMoves() throws Exception {
