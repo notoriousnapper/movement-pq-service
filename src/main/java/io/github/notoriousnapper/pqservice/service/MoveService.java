@@ -18,21 +18,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 @Data
 public class MoveService {
 
-  @Autowired
   IMoveRecordsRepo moveRecordsRepo;
 
   private Map<Long, Move> moveMap;
   private Map<String, Integer> typeMapBySize; // 1 is largest atomsize
 
-  public MoveService() throws Exception {
+  public MoveService(IMoveRecordsRepo moveRecordsRepo) throws Exception {
 
+    this.moveRecordsRepo = moveRecordsRepo;
     List<Move> moves = this.getAllMoves();
     moveMap = new HashMap<>();
     for (Move move : moves) {
@@ -47,13 +46,11 @@ public class MoveService {
     }
   }
 
-  public void addRecord(Move move, String recordValue, Date trueRecordDate) throws IOException, URISyntaxException {
-    // first create file object for file placed at location
-    // specified by filepath
+  public void addRecord(Move move, String recordValue) throws IOException, URISyntaxException {
+    this.addRecord(move, recordValue, Date.from(Instant.now()));
+  }
 
-    // TODO: - ideally should get move data from database not ccachhed just in case*
-    // TODO: Doesn't work in jar? // SHOULD be in target?
-    // TODO: Add test MoveId needs to be set before save*
+  public void addRecord(Move move, String recordValue, Date trueRecordDate) throws IOException, URISyntaxException {
       MoveRecord moveRecord = new MoveRecord();
       moveRecord.setMove(move);
       moveRecord.setMoveId(move.getId());
@@ -117,6 +114,7 @@ public class MoveService {
         move.setImageURL(row[6]);
         move.setDescription(row[7]);
         move.setTags(row[8].split(","));
+        move.setMultiSelect(row[9]);
 
         moves.add(move);
       }

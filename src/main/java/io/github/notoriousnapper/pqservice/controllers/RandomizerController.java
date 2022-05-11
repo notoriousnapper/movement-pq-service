@@ -21,7 +21,7 @@ public class RandomizerController {
   @GetMapping("/randomize/{key}")
   public ResponseEntity<String> getRandomItem(@PathVariable String key) {
     try {
-        return new ResponseEntity<String>(randomizerService.returnRandom(key), HttpStatus.OK);
+        return new ResponseEntity<String>(randomizerService.getRandomItem(key), HttpStatus.OK);
     } catch (Exception e) {
       return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }

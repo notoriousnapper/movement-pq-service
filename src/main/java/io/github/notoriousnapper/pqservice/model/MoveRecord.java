@@ -2,9 +2,7 @@ package io.github.notoriousnapper.pqservice.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import io.github.notoriousnapper.pqservice.util.HashMapConverter;
-import java.io.IOException;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Convert;

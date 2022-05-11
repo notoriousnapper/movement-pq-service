@@ -1,8 +1,8 @@
 package io.github.notoriousnapper.pqservice.controllers;
 
-import static io.github.notoriousnapper.pqservice.model.MoveEnumSorting.ATOM_SIZE_DESCENDING;
-import static io.github.notoriousnapper.pqservice.model.MoveEnumSorting.CURRENT_WEEK;
-import static io.github.notoriousnapper.pqservice.model.MoveEnumSorting.PRIORITY;
+import static io.github.notoriousnapper.pqservice.model.MoveFilterEnum.ATOM_SIZE_DESCENDING;
+import static io.github.notoriousnapper.pqservice.model.MoveFilterEnum.CURRENT_WEEK;
+import static io.github.notoriousnapper.pqservice.model.MoveFilterEnum.PRIORITY;
 
 import io.github.notoriousnapper.pqservice.model.Move;
 import io.github.notoriousnapper.pqservice.model.MoveRecord;
@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,11 +34,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class MoveController {
 
-
-  @Autowired
-  MoveService moveService;
+  private final MoveService moveService;
 
   @GetMapping("/move")
   @ResponseBody
@@ -158,8 +157,8 @@ public class MoveController {
     Move move = new Move();
     move.setId(((Number) payload.get("id")).longValue());
     move.setName((String) payload.get("name"));
-    move.setRecordType((String) payload.get("type"));
-    move.setType((String) payload.get("recordType"));
+    move.setRecordType((String) payload.get("recordType"));
+    move.setType((String) payload.get("type"));
 
 //        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 //        LocalDateTime now = LocalDateTime.now();
@@ -170,18 +169,16 @@ public class MoveController {
 
     String trueRecordDateKey = "trueRecordDate";
     Date trueRecordDate = null;
-    if ((payload.get(trueRecordDateKey)) != null ){
+    if ((payload.get(trueRecordDateKey)) != null) {
       try {
         trueRecordDate = parseStringToDate(payload.get(trueRecordDateKey));
-      } catch (ParseException e){
+      } catch (ParseException e) {
         e.printStackTrace();
       }
     }
 
-
     try {
       moveService.addRecord(move, (String) payload.get("recordValue"), trueRecordDate);
-
       System.out.println(payload);
     } catch (IOException e) {
       e.printStackTrace();

@@ -11,7 +11,9 @@ public enum MoveTypeEnum {
     RELEASE("Release"),
     TIK("Tik"),
     TEXT("Text"),
-    CONDITION("Condition");
+    CONDITION("Condition"),
+    SNAPSHOT("Snapshot"),
+    MULTISELECT("MultiSelect");
 
     private final String text;
 

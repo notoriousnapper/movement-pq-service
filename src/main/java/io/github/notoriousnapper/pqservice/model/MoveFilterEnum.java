@@ -1,6 +1,6 @@
 package io.github.notoriousnapper.pqservice.model;
 
-public enum MoveEnumSorting {
+public enum MoveFilterEnum {
 
     PRIORITY("PRIORITY"),
     ATOM_SIZE_DESCENDING("ATOM_SIZE_DESCENDING"),
@@ -11,7 +11,7 @@ public enum MoveEnumSorting {
     /**
      * @param text
      */
-    MoveEnumSorting(final String text) {
+    MoveFilterEnum(final String text) {
         this.text = text;
     }
 

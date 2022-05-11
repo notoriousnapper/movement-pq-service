@@ -1,10 +1,12 @@
 package io.github.notoriousnapper.pqservice.service;
 
-import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import lombok.Data;
+import lombok.NonNull;
 import org.springframework.stereotype.Component;
 
 /*
@@ -19,6 +21,10 @@ import org.springframework.stereotype.Component;
 @Data
 public class RandomizerService {
 
+//  @NonNull
+  Random random;
+//  @NonNull
+  Map<String, LinkedHashSet> keyToLRUMap = new HashMap<>();
 
     String[] teas = {
         "chamomile",
@@ -37,32 +43,44 @@ public class RandomizerService {
         "play piano",
     };
 
-    // TODO: - save random seed for next time! and say no basically - for now
-    // TODO:
 
     Map<String, List> itemMap = new HashMap<>();
+//    public RandomizerService() {
+//      itemMap.put("teas", Arrays.asList(teas));
+//    }
 
-    public RandomizerService() {
-      itemMap.put("teas", Arrays.asList(teas));
+    public <T> T getRandomItem(List<T> items){
+        return items.get(random.nextInt(items.size()));
     }
 
+    /*
+     * Returns a random item given a list.  If the list has been used before, service will
+     * check within existing LRU, otherwise it will create a new one.
+     * If item generated exists in the LRU, it will keep generating a random one element until
+     * unused element is selected.
+     *
+     * @param listKey is key of type String that is used to fetch or create corresponding LRU
+     * @param
+     * @param
+     *
+     */
 
+    public <T> T getRandomItem(String listKey, List<T> items, Class clazz) {
 
+      if (keyToLRUMap.containsKey(listKey)){
+        LinkedHashSet linkedHashset = keyToLRUMap.get(listKey);
+        int randomIndex = random.nextInt(items.size());
+        while(linkedHashset.contains(randomIndex)) {
+            randomIndex = random.nextInt(items.size());
+        }
+        return items.get(randomIndex);
 
-
-    // TODO: using past knowledgof choices & access
-    // Needs an "acknowledge"
-    public String getRandomItemFromArray(List itemList){
-        return itemList.get(0).toString();
+      } else {
+        LinkedHashSet linkedHashset = new LinkedHashSet();
+      }
+      return null;
     }
-
-    public String returnRandom(String listKey) {
-        // Double check item is gettable?
-        if (getItemMap().containsKey(listKey)){
-            return getItemMap().get(listKey).get(0).toString();
-        }
-        else {
-            return null;
-        }
+    public String getRandomItem(String listKey) {
+      return null;
     }
 }

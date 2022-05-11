@@ -1,0 +1,64 @@
+{
+  "songs": [
+    {
+      "name": "Fresh Eyes",
+      "author": "Andy Grammar",
+      "artifacts": "https://dsc.cloud/4a22b2/03-22-22-Fresh-eyes-solo-variation-3-22-21.m4a,https://dsc.cloud/4a22b2/03-22-22-Fresh-Eyes-guitar-riff.m4a",
+      "instruments": "guitar",
+      "description": "Originally learned when Olivia was going to Africa. I was sad because she still hadn't told her family that we were planning to live together.  Also wanted to sing to her. I was afraid and anxious because of work and her.  And eye surgery. So I thought it'd be funny to sing the song so I can say I can see her with new eyes."
+    },
+    { "id": 2213,
+      "name": "Siberia (Acoustic)",
+      "author": "Lights",
+      "instruments": "piano,guitar",
+      "description": "Originally learned when Angelica was falling in love with another guy. Was both a good bye and stay with me song.",
+      "artifacts": "https://dsc.cloud/4a22b2/Siberia-acoustic-by-lights-practice-3-31-22.m4a"
+    },
+    {
+      "id": 2245,
+      "name": "Come Back for You",
+      "author": "Elephante, MatLuck",
+      "description": "Chords so far: m, em/g, em w/ d (2nd string)",
+      "instruments": "guitar, electronic",
+      "referenceLinks": null,
+      "artifacts": "https://dsc.cloud/4a22b2/03-23-22-comebackforyou.m4a,https://dsc.cloud/4a22b2/03-23-22-comebackforyou.m4a"
+    },
+    {
+      "name": "Ophelia",
+      "author": "The Lumineers",
+      "description": "Chords so far: Dmin A# F - check youtube tutorials",
+      "instruments": "piano, guitar",
+      "referenceLinks": "https://www.youtube.com/watch?v=ObMdtW1HPbY",
+      "artifacts": "https://dsc.cloud/4a22b2/Ophelia-practice_low-octave-3-31-22.m4a"
+    },
+    {
+      "name": "Zui Jin Bi Jiao Fan",
+      "author": "Si Wen",
+      "instruments": "guitar",
+      "description": "In the same class of life sucks but happy to be alive.",
+      "artifacts": "https://dsc.cloud/4a22b2/74.56_zui_jin_bi_jiao_fan_practice_04-09-22.mp3"
+    },
+    {
+      "name": "Beautiful",
+      "author": "Bazzi",
+      "instruments": "guitar, piano",
+      "description": "Just a fun song. You can sing higher with this.  Song that needs strength",
+      "artifacts": "https://dsc.cloud/4a22b2/74.53_Beautiful_Practice_04-09-22.mp3"
+    },
+    {
+      "name": "The Thief and The Moon",
+      "author": "Shawn James",
+      "instruments": "guitar, piano",
+      "description": "Gonna do a duet with bro",
+      "artifacts": "https://dsc.cloud/4a22b2/74.52_thief_and_the_moon_practice-04-09-22.mp3"
+    },
+    {
+      "name": "[placeholder] Honey, Olive, Gold",
+      "author": "Jesse Ren",
+      "instruments": "guitar, piano",
+      "description": "Olivia",
+      "artifacts": "https://dsc.cloud/4a22b2/74.54_honey_olive_slice_ideas-04-09-22.mp3"
+    }
+
+  ]
+}

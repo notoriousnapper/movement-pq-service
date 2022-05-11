@@ -47,6 +47,9 @@ public class Move implements Comparable<Move>{
     @JsonProperty("description")
     String description; // Using Dropshare
 
+    @JsonProperty("multiSelect")
+    String multiSelect; // Using Dropshare
+
     @Override
     public String toString(){
         return String.format("This move is called %s of type %s. " +
@@ -57,5 +60,9 @@ public class Move implements Comparable<Move>{
     @Override
     public int compareTo(Move o) {
         return this.priority - o.priority;
+    }
+
+    public String getDropDownType() {
+        return multiSelect;
     }
 }
